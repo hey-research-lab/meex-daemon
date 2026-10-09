@@ -1,0 +1,1 @@
+{"name":"obol","private":true,"type":"module","scripts":{"build":"cd ../lang && node ../agents/build.mjs","deploy":"npm run build && wrangler deploy"},"dependencies":{"hono":"^4.13.13","viem":"^2.57.3"},"devDependencies":{"wrangler":"^4.148.0"}}

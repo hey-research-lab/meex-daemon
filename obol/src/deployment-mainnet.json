@@ -1,0 +1,21 @@
+{
+  "chainId": 4663,
+  "deployedAt": "2026-10-08",
+  "deployer": "0x76c4eEE755Ee20c973db55C522F1E75AD3132DFF",
+  "dollar": "0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168",
+  "accountImpl": "0xAc855818BC77CD378D7ce24ab6151491e1623Dc6",
+  "sale": "0xD22301bcA4eCfFb9F4B87792885D766595e7363c",
+  "nft": "0x1BD783d8dcc50db3f610d1c46ec7e97d7f457402",
+  "registry": "0x000000006551c19487814612e58FE06813775758",
+  "treasury": "0xA7DC540d12E53Cf8d6615921Fe7b4f9Ca73A0dBC",
+  "treasuryNote": "the Re:TCG Safe (SafeL2 1.4.1, 2-of-3), named SHYGUY LLC in the sale's memo; also owner() of the NFT, informational only",
+  "supply": 10048,
+  "walletBps": 9000,
+  "firstPriceEth": "0.01",
+  "multiplierBps": 13000,
+  "opensAt": 1791655200,
+  "opensAtIso": "2026-10-10T18:00:00Z",
+  "baseUri": "https://obol.sh/d/",
+  "contractUri": "https://obol.sh/collection",
+  "provenance": { "tableSha256": "0e3d790792ae05b6f50e77113ff8fd8b7a2916fe3805c398ad8ca198142826d8", "seedSha256": "db9c5f2405fed069f3b705ef15e77e9730b6f4f0fb9d66c9988d76c0ee3bcf81" }
+}

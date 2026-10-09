@@ -1,0 +1,53 @@
+{
+  "chainId": 46630,
+  "deployedAt": "2026-10-07",
+  "deployer": "0x76c4eEE755Ee20c973db55C522F1E75AD3132DFF",
+  "dollar": "0x2Ce7B2d37DF6fFb1EB30b7Ebc86E033f1628B914",
+  "accountImpl": "0xbE6296C9d98056983b29F9598840F0C4186BBAF7",
+  "sale": "0xf862c4DaAfCEc95dfaA22Ab946Cf60ca23cB0e4A",
+  "nft": "0x336923B1E796202B3a59690ea3680240C3eA4c7d",
+  "otc": "0x3369a6B7686f532Bd23EacD2c0d1276334428897",
+  "registry": "0x000000006551c19487814612e58FE06813775758",
+  "wallets": {
+    "1": "0x00e66716c1dcB47DacccBF0105a16c97e3852783",
+    "2": "0xC3CCdC99b43F0AEAD8Cf8fcEE685d732E65a99D0"
+  },
+  "agents": {
+    "1": "0x72cEB0E825a38357Be0bC7840FbE456e76725ED1",
+    "2": "0x7cb335CdE94D1BBe80eF435Eb37E07A94B5a557E"
+  },
+  "facilitator": "0x74A91FAf75E7caEF38fC5711e7C20d48cfae9010",
+  "testnetParams": {
+    "firstBandPriceEth": "0.0001",
+    "note": "1/100 of mainnet's 0.01; everything else identical"
+  },
+  "testTokens": {
+    "tNVDA": {
+      "address": "0xb3691574f47F2d2b0e526DB8E7074D03336C1db2",
+      "decimals": 18,
+      "deployedAt": "2026-10-08",
+      "note": "TestStock \u2014 testnet stand-in, no price"
+    },
+    "tNVX": {
+      "address": "0xe7c139925257e1e9857dd65EaAD30f0D1d0ee512",
+      "decimals": 0,
+      "deployedAt": "2026-10-08",
+      "note": "index #1 share by daemon #2: 1 tNVDA + 0.40 tUSDG per share, in DaemonIndexes"
+    }
+  },
+  "options": "0x39155170c596DEDAae9E197246F96DC55832BD76",
+  "optionsDeployedAt": "2026-10-08",
+  "indexes": "0xF9e6770316633d7510e86A36F293bF0af3e2E4e1",
+  "indexesDeployedAt": "2026-10-08",
+  "swaps": "0x47b46b07eE60bEE0037d4Fd4ba8B698fFee82B77",
+  "swapsDeployedAt": "2026-10-08",
+  "feeds": {
+    "NVDA": {
+      "address": "0x5f7aDC6E114c7a5beAd0f6cfc05517b6c974fC49",
+      "decimals": 8,
+      "mirrorOf": "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15",
+      "feeder": "0x381Fb685d45Ca25420D717049C233DbfDBc6B83f",
+      "note": "MirrorFeed of Chainlink 'Robinhood NVDA / USD' (RHC mainnet) \u2014 testnet only, trusted relay"
+    }
+  }
+}

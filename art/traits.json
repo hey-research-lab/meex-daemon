@@ -1,0 +1,82 @@
+{
+  "_note": "Daemon traits — approved by the operator 2026-10-08 (names and weights). Weights are the share of tokens (%). Colours are display sRGB hex. Designed by Chad Neal; published by SHYGUY LLC.",
+  "supply": 10048,
+  "background": "ece9e2",
+  "ink": "1a1a1d",
+  "skin": "b9b6b0",
+  "accent": "e4e0d6",
+  "traits": {
+    "Top": {
+      "Raglan Hoodie": { "weight": 22, "key": "hoodie" },
+      "Tee": { "weight": 14, "key": "tee" },
+      "Long-sleeve Tee": { "weight": 12, "key": "longtee" },
+      "Work Jacket": { "weight": 10, "key": "workjacket" },
+      "Button Shirt": { "weight": 10, "key": "buttonshirt" },
+      "Coveralls": { "weight": 8, "key": "coveralls" },
+      "Distressed Shirt": { "weight": 8, "key": "distressed" },
+      "Sport Top": { "weight": 8, "key": "sporttop" },
+      "Suit Jacket": { "weight": 8, "key": "suitjacket" }
+    },
+    "Colourway": {
+      "Ash": { "weight": 14, "hex": "9aa0a6" },
+      "Navy": { "weight": 12, "hex": "243354" },
+      "Black": { "weight": 12, "hex": "2a2a2e" },
+      "Forest": { "weight": 10, "hex": "35553c" },
+      "Oxblood": { "weight": 9, "hex": "6a2329" },
+      "Mustard": { "weight": 8, "hex": "c9a227" },
+      "Sky": { "weight": 8, "hex": "8fb8de" },
+      "Cream": { "weight": 7, "hex": "e8dfc8" },
+      "Teal": { "weight": 7, "hex": "1f7470" },
+      "Rust": { "weight": 6, "hex": "a2512a" },
+      "Lilac": { "weight": 4, "hex": "b9a3d6" },
+      "Hi-Vis": { "weight": 3, "hex": "d4f00f" }
+    },
+    "Pants": {
+      "Charcoal": { "weight": 25, "hex": "3d3e42" },
+      "Denim": { "weight": 22, "hex": "3e5f8a" },
+      "Black": { "weight": 18, "hex": "202024" },
+      "Khaki": { "weight": 15, "hex": "b8a57c" },
+      "Olive": { "weight": 12, "hex": "5c633c" },
+      "White": { "weight": 8, "hex": "e9e7e1" }
+    },
+    "Shoes": {
+      "Black Loafers": { "weight": 25, "key": "shoes01", "hex": "232327" },
+      "Brown Oxfords": { "weight": 25, "key": "shoes03", "hex": "5e3c25" },
+      "White Sneakers": { "weight": 25, "key": "shoes02", "hex": "ecebe6" },
+      "Grey Slip-ons": { "weight": 25, "key": "shoes06", "hex": "8b8e93" }
+    },
+    "Casing": {
+      "Beige": { "weight": 40, "hex": "d8cfb6" },
+      "Platinum": { "weight": 25, "hex": "c9cbcc" },
+      "Charcoal": { "weight": 20, "hex": "3c3d40" },
+      "Bondi": { "weight": 10, "hex": "2a9bb5" },
+      "Gold": { "weight": 5, "hex": "c9a24a" }
+    },
+    "Phosphor": {
+      "Green": { "weight": 40, "on": "3dff6e", "off": "07180c" },
+      "Amber": { "weight": 25, "on": "ffb22e", "off": "1a1003" },
+      "White": { "weight": 15, "on": "eef2ff", "off": "0c0d12" },
+      "Blue": { "weight": 12, "on": "ffffff", "off": "1d4fd8" },
+      "Red": { "weight": 8, "on": "ff4040", "off": "1c0505" }
+    },
+    "Face": {
+      "Blank": { "weight": 15, "key": "blank" },
+      "Cursor": { "weight": 12, "key": "cursor" },
+      "Smile": { "weight": 10, "key": "smile" },
+      "Eyes": { "weight": 10, "key": "eyes" },
+      "Scanlines": { "weight": 10, "key": "scanlines" },
+      "Loading": { "weight": 8, "key": "loading" },
+      "Static": { "weight": 8, "key": "static" },
+      "Heart": { "weight": 6, "key": "heart" },
+      "Wink": { "weight": 6, "key": "wink" },
+      "X_X": { "weight": 5, "key": "xx" },
+      "Error": { "weight": 5, "key": "error" },
+      "Skull": { "weight": 5, "key": "skull" }
+    },
+    "Hat": {
+      "None": { "weight": 90 },
+      "Fedora": { "weight": 7, "key": "fedora01", "hex": "2e2e33" },
+      "Cocked Fedora": { "weight": 3, "key": "fedora_cocked", "hex": "8a6a45" }
+    }
+  }
+}

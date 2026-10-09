@@ -1,0 +1,18 @@
+{
+  "collection": "Daemon",
+  "supply": 10048,
+  "order": [
+    "Top",
+    "Colourway",
+    "Pants",
+    "Shoes",
+    "Casing",
+    "Phosphor",
+    "Face",
+    "Hat"
+  ],
+  "tableSha256": "0e3d790792ae05b6f50e77113ff8fd8b7a2916fe3805c398ad8ca198142826d8",
+  "seedSha256": "db9c5f2405fed069f3b705ef15e77e9730b6f4f0fb9d66c9988d76c0ee3bcf81",
+  "table": "JSON array, one row per token id 0..supply-1, the 8 trait values in `order`, no spaces (separators , :)",
+  "derive": "the generator (kept private: it reads the secret seed): random.Random(int(sha256(seed),16)), weighted draws per trait in `order`, Coveralls \u2192 Pants 'Coveralls', duplicate looks redrawn"
+}

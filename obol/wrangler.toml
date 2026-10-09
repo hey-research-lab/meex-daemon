@@ -1,0 +1,57 @@
+name = "obol"
+main = "src/worker.mjs"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+# obol.sh reaches this through a thin proxy in the zone's own account
+workers_dev = true
+
+# a Worker can't fetch its own public URL — daemon-to-daemon x402 goes through this self binding
+services = [{ binding = "SELF", service = "obol" }]
+
+# Workers AI: the daemons' hosted Qwen (billed per token at the posted rate; 10k neurons/day free)
+[ai]
+binding = "AI"
+
+[[r2_buckets]]
+binding = "ART"
+bucket_name = "daemon-art"   # each token's spin GIF + first frame (art/tools/compose.py)
+
+[[durable_objects.bindings]]
+name = "DAEMON"
+class_name = "Daemon"
+
+[[durable_objects.bindings]]
+name = "FLOOR"
+class_name = "Floor"
+
+[[durable_objects.bindings]]
+name = "CLOCK"
+class_name = "Clock"
+
+[[durable_objects.bindings]]
+name = "SALES"
+class_name = "SaleFeed"   # the live sale feed: indexes the mainnet sale's Bought events (src/sales.mjs)
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Daemon", "Floor"]
+
+[[migrations]]
+tag = "v2"
+new_sqlite_classes = ["Clock"]
+
+[[migrations]]
+tag = "v3"
+new_sqlite_classes = ["SaleFeed"]
+
+[vars]
+RPC = "https://rpc.testnet.chain.robinhood.com"
+MAINNET_RPC = "https://rpc.mainnet.chain.robinhood.com"   # read-only: Chainlink rounds for the testnet mirror
+PUBLIC_ORIGIN = "https://obol.sh"
+GOOGLE_SITE_VERIFICATION = "KHgLK0euXelArPf5m5kkv9306E69CxkGWX5YeXoZmow"   # Search Console URL-prefix property https://obol.sh/ (meta method; public by design)
+HOLDER_EMAIL = "hello@meex.work"   # a daemon's own draft waiting for the holder → one email (secret RESEND_KEY)
+
+# secrets: FACILITATOR_KEY, AGENT_KEY_1, AGENT_KEY_2, ADMIN_KEY (from the Keychain; testnet only)
+
+[triggers]
+crons = ["*/10 * * * *"]   # kicks the Clock DO (its alarm runs the testnet price mirror)
