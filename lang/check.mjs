@@ -114,6 +114,9 @@ export function checkSkill(name, raw, { maxPerStep = 1, otc = null, options = nu
     }
     seen.add(st.id);
   }
+  // the costs are decimal dollars summed as floats (0.1 + 0.2 = 0.30000000000000004): settle the sum on USDG's own
+  // precision so a price equal to the worst case is not refused
+  maxCost = Math.round(maxCost * 10 ** RHC.decimals) / 10 ** RHC.decimals;
   if (price != null && price < maxCost) errors.push(`price ${price} is below the worst-case cost ${maxCost.toFixed(6)} — it could sell at a loss`);
   for (const r of refsIn(s.output ?? "")) if (r.startsWith("steps.") && !seen.has(r.split(".")[1])) errors.push(`output: "${r}" isn't a step`);
   return { name, ok: !errors.length, errors, price, maxCost, timeout, inputs, steps, description: s.description, output: s.output, usesModel };

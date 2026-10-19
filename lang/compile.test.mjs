@@ -40,6 +40,11 @@ test("refuses a price under the worst-case cost", async () => {
   const s = await bad(`step "a" {\n x402 = "https://www.retcg.xyz/api/appraise/pokemon"\n max = "0.02"\n }`);
   assert.ok(!s.ok); assert.match(s.errors.join(), /below the worst-case cost/);
 });
+test("accepts a price equal to the worst-case cost, whatever the float sum", async () => {
+  const { skills } = await compileFile(`skill "x" {\n description = "d"\n price = "0.3"\n step "a" {\n x402 = "https://www.retcg.xyz/api/a"\n max = "0.1"\n }\n step "b" {\n x402 = "https://www.retcg.xyz/api/b"\n max = "0.2"\n }\n output = "\${steps.b.body}"\n}`);
+  assert.ok(skills[0].ok, skills[0].errors.join("; "));
+  assert.equal(skills[0].maxCost, 0.3);
+});
 test("refuses URLs off the allowlist", async () => {
   const s = await bad(`step "a" { fetch = "https://evil.example/x" }`);
   assert.ok(!s.ok); assert.match(s.errors.join(), /allowlist/);
